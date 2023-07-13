@@ -22,6 +22,7 @@ class BreedDetail(APIView):
         breed = Breed.objects.get(pk = pk)
         serializer = BreedSerializer(breed)
         return Response(serializer.data)
+    
     def put(self, request, pk):
         breed = Breed.objects.get(pk=pk)
         serializer = BreedSerializer(breed, data = request.data)
