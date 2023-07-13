@@ -20,6 +20,7 @@ from dog_app.views import BreedDetail, BreedList, DogDetail, DogList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('api/breeds/', BreedList.as_view()),
     path('api/breeds/<int:pk>/', BreedDetail.as_view()),
     path('api/dogs/', DogList.as_view()),
